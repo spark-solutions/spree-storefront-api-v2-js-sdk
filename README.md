@@ -1,3 +1,9 @@
+TODO: "Try using the ESM bundle first. If you have problems with it or you need to support old browsers or old versions of NodeJS, switch to UMD."
+
+TODO: "Spree SDK's bundles (inside /dist) rely on third-party libraries. These are not included within bundles. You need to include `axios` and `qs` to the project on your own. Depending on how you build your project, they will be installed automatically by npm/yarn based on information in the SDK's package.json file or you'll need to fetch them via `&lt;script&gt;` tags. Both, `&lt;script src=...` and `&lt;script type='module' src=...` variants are supported."
+
+TODO: Test `&lt;script type='module' src=...`
+
 # Spree Commerce Storefront API v2 JavaScript / TypeScript SDK
 
 Node module to easily integrate your JavaScript or TypeScript application with [Spree API V2](https://guides.spreecommerce.org/api/v2). You can create an entirely custom Storefront in JS/TS with this package including one page checkout, Single Page Apps, PWAs and so on.
@@ -96,6 +102,10 @@ client.products.list({
 The SDK is also hosted by the [UNPKG][7] CDN. [Follow this link to download version 4.5.1][5] and [this link to download the newest version][6]. Include the SDK on a website like so:
 
 ```html
+<!-- Fetch axios and qs libraries first. -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.min.js"></script>
+<!-- Fetch the Spree SDK. -->
 <script src="https://unpkg.com/@spree/storefront-api-v2-sdk@4.5.1/dist/client/index.js"></script>
 
 <script>

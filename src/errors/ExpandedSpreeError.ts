@@ -1,5 +1,4 @@
 import { AxiosResponse } from 'axios'
-import get from 'lodash/get'
 import { Errors, FieldErrors } from '../interfaces/errors/Errors'
 import BasicSpreeError from './BasicSpreeError'
 
@@ -33,6 +32,6 @@ export default class ExpandedSpreeError extends BasicSpreeError {
   }
 
   public getErrors(path: string[]): Errors | FieldErrors | null {
-    return get(this.errors, path, null)
+    return path.reduce((node, pathKey) => node?.[pathKey], this.errors) ?? null
   }
 }

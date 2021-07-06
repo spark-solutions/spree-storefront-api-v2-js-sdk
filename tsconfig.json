@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
     "noUnusedParameters": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
     "esModuleInterop": true,
-    "declaration": true,
-    "declarationDir": "./types",
-    "importsNotUsedAsValues": "preserve"
+    "importsNotUsedAsValues": "preserve",
+    "target": "es6"
   }
 }

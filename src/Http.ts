@@ -1,5 +1,5 @@
 import Axios, { AxiosError, AxiosInstance, AxiosRequestConfig, Method } from 'axios'
-import * as qs from 'qs'
+import { stringify } from 'qs'
 import {
   BasicSpreeError,
   ExpandedSpreeError,
@@ -27,7 +27,7 @@ export default class Http {
         'Content-Type': 'application/json'
       },
       paramsSerializer: (params) => {
-        return qs.stringify(params, { arrayFormat: 'brackets' })
+        return stringify(params, { arrayFormat: 'brackets' })
       }
     })
   }
