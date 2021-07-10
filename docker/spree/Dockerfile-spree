@@ -2,7 +2,7 @@
 
 # Builds Spree at v4.1.12 tag and allows CORS requests
 
-FROM ruby:2.5.1
+FROM ruby:2
 RUN apt-get update -qq && \
   apt-get install -y build-essential libpq-dev && \
   curl -sL https://deb.nodesource.com/setup_8.x | bash - && apt-get install -y nodejs
